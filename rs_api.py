@@ -21,6 +21,9 @@ model = load_model(Config.getNNModel(), compile=False)
 # read file
 df = DataStore.getNNFileOutput()
 
+@app.route("/")
+def start():
+    return "The MBSA Server is Running"
 
 @app.route("/recommendation/product", methods=['GET', 'POST'])
 def productRecommendationApi():
