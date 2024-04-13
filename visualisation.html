@@ -44,7 +44,7 @@
             if (params != null) {
                 params = "?" + params
             }
-            url = "http://localhost:5000/recommendation/data" + params
+            url = "https://flask-pyth.vercel.app/" + params
 
             d3.json(url).then(function (data) {
                 // console.log(data[0]);
